@@ -1,0 +1,33 @@
+public class removeChracter {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String line="how are you, abc";
+		String[] sarr=line.trim().split(",");
+		StringBuffer[] br=new StringBuffer[2];
+		br[0]=new StringBuffer(sarr[0].trim());
+		br[1]=new StringBuffer(sarr[1].trim());
+		for(int i=0;i<br[0].length();i++)
+		{
+			char c=br[0].charAt(i);
+			int test=0;
+			for(int j=0;j<br[1].length();j++)
+			{
+				char m=br[1].charAt(j);
+				if(c==m)
+				{
+					test=1;
+					break;
+				}
+			}
+			if(test==0)
+			{
+				System.out.print(c);
+			}
+		}
+		System.out.println();
+
+	}
+
+}
+
